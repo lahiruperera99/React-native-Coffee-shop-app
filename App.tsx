@@ -5,6 +5,9 @@ import TabNavigator from './src/navigators/TabNavigator';
 import DetailsScreen from './src/screens/DetailsScreen';
 import PaymentScreen from './src/screens/PaymentScreen';
 import SplashScreen from 'react-native-splash-screen';
+import LoginPage from './src/screens/Login&Register/Login';
+import RegisterPage from './src/screens/Login&Register/Register';
+import HomeScreen from './src/screens/HomeScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +29,18 @@ const App = () => {
         <Stack.Screen
           name="Payment"
           component={PaymentScreen}
+          options={{animation: 'slide_from_bottom'}}></Stack.Screen>
+           <Stack.Screen
+          name="Login"
+          component={LoginPage}
+          options={{animation: 'slide_from_bottom'}}></Stack.Screen>
+           <Stack.Screen
+          name="Register"
+          component={RegisterPage}
+          options={{animation: 'slide_from_bottom'}}></Stack.Screen>
+          <Stack.Screen
+          name="Home"
+          component={HomeScreen}
           options={{animation: 'slide_from_bottom'}}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
